@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="cs" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>b6b.eu | Posvátná Svatyně Dia na Hoře Olymp – Mytikas</title>
+    <meta name="description" content="b6b.eu – Starořecká svatyně na Hoře Olymp (vrchol Mytikas). Jediný Bůh, skutečným jménem Zeus. Diovy tituly, modlitby a poselství.">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Cinzel, Cinzel Decorative, Cormorant Garamond (plná podpora české diakritiky latin-ext) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --olympus-white: #f8fafc;
+            --olympus-marble: #eef2f6;
+            --olympus-mist: #dce5f0;
+            --olympus-slate: #475569;
+            --olympus-blue-grey: #334155;
+            --olympus-deep-blue: #1e293b;
+            --olympus-night: #0f172a;
+            --sacred-gold: #d4af37;
+            --sacred-gold-bright: #f7e28b;
+            --sacred-gold-deep: #9c7a1c;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background-color: #e6edf5;
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.96) 0%, rgba(219, 230, 242, 0.85) 45%, rgba(176, 194, 214, 0.9) 100%),
+                linear-gradient(180deg, #f1f5f9 0%, #dbe4ee 50%, #cbd5e1 100%);
+            color: #1e293b;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, .font-classical {
+            font-family: 'Cinzel', serif;
+        }
+
+        /* Zlatý majestátní font pro hlavní nápis pod Zeus.jpg */
+        .majestic-gold-inscription {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            background: linear-gradient(
+                135deg,
+                #9e7818 0%,
+                #d4af37 18%,
+                #fff3b0 38%,
+                #e5c158 52%,
+                #fff6c5 68%,
+                #c59b27 85%,
+                #8f6b12 100%
+            );
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 2px 10px rgba(212, 175, 55, 0.35));
+            animation: shimmerGold 8s ease-in-out infinite;
+            letter-spacing: 0.04em;
+            line-height: 1.55;
+        }
+
+        @keyframes shimmerGold {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* Mramorový povrch karet a stél */
+        .marble-stele {
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.95) 0%, rgba(241, 245, 249, 0.92) 60%, rgba(226, 232, 240, 0.95) 100%);
+            box-shadow: 
+                0 12px 32px -8px rgba(30, 41, 59, 0.14),
+                0 2px 6px rgba(30, 41, 59, 0.06),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(148, 163, 184, 0.45);
+            position: relative;
+        }
+
+        .dark-olympus-sanctuary {
+            background: linear-gradient(180deg, #1e293b 0%, #26354a 55%, #1a2536 100%);
+            box-shadow: 
+                0 20px 50px rgba(15, 23, 42, 0.35),
+                inset 0 0 80px rgba(15, 23, 42, 0.6);
+            border: 2px solid rgba(212, 175, 55, 0.45);
+        }
+
+        /* Antické kanelované sloupy po stranách chrámu */
+        .fluted-column {
+            background: repeating-linear-gradient(
+                90deg,
+                #f8fafc 0px,
+                #e2e8f0 5px,
+                #cbd5e1 10px,
+                #f8fafc 15px
+            );
+            box-shadow: inset 0 0 18px rgba(71, 85, 105, 0.28), 0 8px 25px rgba(30, 41, 59, 0.12);
+        }
+
+        /* Starořecký meandr (vzor klíče) */
+        .meander-pattern {
+            height: 16px;
+            width: 100%;
+            background-color: transparent;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Cpath d='M0 15h32M0 1h32M2 1v11h10V5H6v4h2V7h2v3H4V1M18 15V4h10v7h-6V7h2v2h2V6h-6v9' fill='none' stroke='%2364748b' stroke-width='1.4' stroke-opacity='0.55'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        .meander-gold {
+            height: 16px;
+            width: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Cpath d='M0 15h32M0 1h32M2 1v11h10V5H6v4h2V7h2v3H4V1M18 15V4h10v7h-6V7h2v2h2V6h-6v9' fill='none' stroke='%23d4af37' stroke-width='1.4' stroke-opacity='0.65'/%3E%3C/svg%3E");
+            background-repeat: repeat-x;
+        }
+
+        /* Animace plamene svíček */
+        .candle-wrapper {
+            cursor: pointer;
+            user-select: none;
+            transition: transform 0.25s ease;
+        }
+
+        .candle-wrapper:hover {
+            transform: translateY(-3px);
+        }
+
+        .candle-body {
+            background: linear-gradient(90deg, #e2e8f0 0%, #ffffff 38%, #f8fafc 68%, #cbd5e1 100%);
+            box-shadow: 
+                inset 0 2px 5px rgba(255, 255, 255, 0.9),
+                0 6px 14px rgba(15, 23, 42, 0.35);
+            position: relative;
+        }
+
+        .candle-wrapper.is-lit .candle-body {
+            box-shadow: 
+                inset 0 4px 10px rgba(254, 240, 138, 0.75),
+                0 0 22px rgba(251, 191, 36, 0.35),
+                0 6px 14px rgba(15, 23, 42, 0.35);
+        }
+
+        .candle-flame-container {
+            opacity: 0;
+            transform: scale(0.3) translateY(8px);
+            transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+        }
+
+        .candle-wrapper.is-lit .candle-flame-container {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+
+        .flame-outer {
+            animation: flickerFlame 2.4s infinite ease-in-out alternate;
+            transform-origin: 50% 90%;
+        }
+
+        .flame-halo {
+            animation: pulseHalo 3s infinite ease-in-out;
+        }
+
+        @keyframes flickerFlame {
+            0%   { transform: scaleX(1) scaleY(1) rotate(-1.5deg); }
+            25%  { transform: scaleX(0.94) scaleY(1.06) rotate(1.5deg); }
+            50%  { transform: scaleX(1.04) scaleY(0.96) rotate(-1deg); }
+            75%  { transform: scaleX(0.96) scaleY(1.05) rotate(2deg); }
+            100% { transform: scaleX(1.02) scaleY(1.02) rotate(-0.5deg); }
+        }
+
+        @keyframes pulseHalo {
+            0%, 100% { opacity: 0.45; transform: scale(1); }
+            50% { opacity: 0.78; transform: scale(1.18); }
+        }
+
+        /* Jemná mlha Hory Olymp */
+        .olympus-clouds {
+            background: radial-gradient(ellipse at center, rgba(255,255,255,0.65) 0%, rgba(255,255,255,0) 70%);
+            filter: blur(22px);
+            pointer-events: none;
+        }
+
+        /* Aktivní položka navigace */
+        .nav-tab.active {
+            color: #1e293b;
+            background: rgba(255, 255, 255, 0.85);
+            border-bottom: 2px solid #d4af37;
+            box-shadow: 0 4px 12px rgba(51, 65, 85, 0.08);
+        }
+
+        /* Přechod sekcí */
+        .sanctuary-section {
+            transition: opacity 0.35s ease, transform 0.35s ease;
+        }
+
+        .hidden-section {
+            display: none !important;
+        }
+    </style>
+</head>
+<body class="selection:bg-slate-700 selection:text-amber-100">
+
+    <!-- Horní oblaka Olympu (dekorativní vrstva) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0" aria-hidden="true">
+        <div class="olympus-clouds absolute -top-24 left-1/4 w-96 h-64 rounded-full"></div>
+        <div class="olympus-clouds absolute top-1/3 -right-24 w-80 h-80 rounded-full"></div>
+        <div class="olympus-clouds absolute bottom-10 -left-20 w-96 h-64 rounded-full"></div>
+    </div>
+
+    <!-- Levý a pravý antický sloup chrámu (viditelný na širokých obrazovkách) -->
+    <aside class="hidden 2xl:flex fixed left-4 top-0 bottom-0 w-12 flex-col justify-between items-center py-6 pointer-events-none z-10 opacity-75" aria-hidden="true">
+        <div class="w-16 h-6 bg-gradient-to-b from-slate-200 to-slate-400 rounded-sm border border-slate-400 shadow"></div>
+        <div class="w-14 h-4 bg-slate-300 rounded-sm border-b border-slate-400"></div>
+        <div class="w-10 flex-1 fluted-column border-x border-slate-400"></div>
+        <div class="w-14 h-4 bg-slate-300 rounded-sm border-t border-slate-400"></div>
+        <div class="w-16 h-8 bg-gradient-to-t from-slate-400 to-slate-200 rounded-sm border border-slate-400 shadow"></div>
+    </aside>
+
+    <aside class="hidden 2xl:flex fixed right-4 top-0 bottom-0 w-12 flex-col justify-between items-center py-6 pointer-events-none z-10 opacity-75" aria-hidden="true">
+        <div class="w-16 h-6 bg-gradient-to-b from-slate-200 to-slate-400 rounded-sm border border-slate-400 shadow"></div>
+        <div class="w-14 h-4 bg-slate-300 rounded-sm border-b border-slate-400"></div>
+        <div class="w-10 flex-1 fluted-column border-x border-slate-400"></div>
+        <div class="w-14 h-4 bg-slate-300 rounded-sm border-t border-slate-400"></div>
+        <div class="w-16 h-8 bg-gradient-to-t from-slate-400 to-slate-200 rounded-sm border border-slate-400 shadow"></div>
+    </aside>
+
+    <!-- HLAVIČKA CHRÁMU & NAVIGACE (Architráv s mobilním Hamburger menu) -->
+    <header class="sticky top-0 z-40 bg-slate-100/95 backdrop-blur-md border-b border-slate-300 shadow-md">
+        <!-- Horní tympanonový pruh -->
+        <div class="bg-gradient-to-r from-slate-800 via-slate-700 to-slate-800 text-slate-100 py-1.5 px-4 text-center text-xs sm:text-sm tracking-widest uppercase font-classical">
+            <span class="text-amber-300">✦</span> Hora Olymp • Vrchol Mytikas (2918 m n. m.) • Posvátná Svatyně Dia <span class="text-amber-300">✦</span>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Identita chrámu b6b.eu -->
+                <a href="#oltar" onclick="switchSubpage('oltar', event)" class="flex items-center gap-3 group focus:outline-none">
+                    <!-- SVG antický chrám -->
+                    <div class="w-11 h-11 rounded-full bg-slate-800 border border-amber-400/60 flex items-center justify-center shadow-inner group-hover:bg-slate-700 transition">
+                        <svg class="w-7 h-7 text-amber-300" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M32 6L6 20H58L32 6Z" stroke="currentColor" stroke-width="3" stroke-linejoin="round" fill="rgba(212,175,55,0.18)"/>
+                            <path d="M10 24H54" stroke="currentColor" stroke-width="2.5"/>
+                            <path d="M14 24V48M26 24V48M38 24V48M50 24V48" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+                            <path d="M8 48H56V53H8V48Z" fill="currentColor"/>
+                            <path d="M4 55H60" stroke="currentColor" stroke-width="3"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block font-classical text-2xl sm:text-3xl font-bold tracking-wider text-slate-800">
+                            b6b<span class="text-amber-600">.eu</span>
+                        </span>
+                        <span class="block text-xs tracking-widest uppercase text-slate-500 font-classical">
+                            Svatyně Hory Olymp
+                        </span>
+                    </div>
+                </a>
+
+                <!-- Desktop Navigace (Pouze Oltář Dia) -->
+                <nav class="hidden md:flex items-center space-x-1 lg:space-x-2 font-classical text-xs lg:text-sm tracking-wider uppercase" aria-label="Hlavní navigace svatyně">
+                    <a href="#oltar" data-target="oltar" onclick="switchSubpage('oltar', event)" class="nav-tab active px-3.5 py-2.5 rounded-md text-slate-700 hover:text-slate-900 hover:bg-white/70 transition font-semibold">
+                        Oltář Dia
+                    </a>
+                </nav>
+
+                <!-- Mobilní Hamburger Tlačítko (pro podstránky na mobilu) -->
+                <div class="flex md:hidden">
+                    <button id="mobile-menu-toggle" type="button" onclick="toggleMobileMenu()" aria-expanded="false" aria-controls="mobile-hamburger-menu" aria-label="Otevřít menu podstránek" class="inline-flex items-center justify-center p-2.5 rounded-lg text-slate-800 bg-white/80 hover:bg-white border border-slate-300 shadow-sm focus:outline-none">
+                        <!-- Hamburger ikona -->
+                        <svg id="hamburger-icon-open" class="h-7 w-7 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Křížek pro zavření -->
+                        <svg id="hamburger-icon-close" class="hidden h-7 w-7 text-slate-800" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Starořecký meandr pod architrávem -->
+        <div class="meander-pattern" aria-hidden="true"></div>
+
+        <!-- Mobilní Hamburger Menu (Pouze Oltář Dia) -->
+        <div id="mobile-hamburger-menu" class="hidden md:hidden bg-slate-100/98 border-b-2 border-slate-300 shadow-xl">
+            <div class="px-4 pt-3 pb-5 space-y-2 font-classical text-sm tracking-wider uppercase">
+                <div class="text-xs text-slate-500 px-3 py-1 border-b border-slate-200">
+                    Svatyně b6b.eu
+                </div>
+                <a href="#oltar" data-target="oltar" onclick="switchSubpage('oltar', event, true)" class="mobile-nav-item block px-4 py-3 rounded-lg bg-white text-slate-900 font-bold border-l-4 border-amber-500 shadow-sm">
+                    🕯️ Oltář Dia
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HLAVNÍ OBSAH SVATYNĚ -->
+    <main class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+        <!-- Antický Tympanon (Trojúhelníkový štít chrámu nad svatyní) -->
+        <div class="mb-8 sm:mb-12 text-center">
+            <div class="max-w-4xl mx-auto">
+                <svg class="w-full h-14 sm:h-20 md:h-24 drop-shadow-md" viewBox="0 0 800 95" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <!-- Vnější trojúhelník tympanonu -->
+                    <polygon points="400,6 16,86 784,86" fill="url(#tympanonGrad)" stroke="#64748b" stroke-width="3"/>
+                    <!-- Vnitřní tympanon -->
+                    <polygon points="400,16 56,78 744,78" fill="url(#innerTympanon)" stroke="#d4af37" stroke-width="1.5" stroke-opacity="0.7"/>
+                    <!-- Středový sluneční a bleskový emblém Olympu -->
+                    <circle cx="400" cy="52" r="18" fill="#1e293b" stroke="#d4af37" stroke-width="2"/>
+                    <path d="M402 39L394 52H401L398 65L407 50H400L402 39Z" fill="#f7e28b"/>
+                    <!-- Akantové rozviliny po stranách -->
+                    <path d="M365 56C330 56 300 68 250 70M435 56C470 56 500 68 550 70" stroke="#94a3b8" stroke-width="2" stroke-linecap="round"/>
+                    <circle cx="320" cy="60" r="4" fill="#d4af37" fill-opacity="0.6"/>
+                    <circle cx="480" cy="60" r="4" fill="#d4af37" fill-opacity="0.6"/>
+                    <defs>
+                        <linearGradient id="tympanonGrad" x1="400" y1="6" x2="400" y2="86" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#f8fafc"/>
+                            <stop offset="100%" stop-color="#cbd5e1"/>
+                        </linearGradient>
+                        <linearGradient id="innerTympanon" x1="400" y1="16" x2="400" y2="78" gradientUnits="userSpaceOnUse">
+                            <stop offset="0%" stop-color="#e2e8f0"/>
+                            <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.35"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <!-- =================================================================== -->
+        <!-- SEKCE 1: POSVÁTNÝ OLTÁŘ, VAVŘÍNOVÝ VĚNEC, ZEUS.JPG, SVÍČKY A OBĚTINY -->
+        <!-- =================================================================== -->
+        <section id="section-oltar" class="sanctuary-section mb-16 sm:mb-24">
+            <div class="dark-olympus-sanctuary rounded-2xl p-5 sm:p-8 md:p-12 text-slate-100 relative overflow-hidden">
+                
+                <!-- Dekorativní zlatý meandr nahoře -->
+                <div class="meander-gold mb-6 opacity-80" aria-hidden="true"></div>
+
+                <!-- Hvězdná a oblačná záře vrcholu Mytikas v pozadí oltáře -->
+                <div class="absolute top-12 left-1/2 -translate-x-1/2 w-3/4 h-72 bg-amber-300/10 rounded-full blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+                <!-- 1. VAVŘÍNOVÝ VĚNEC POVĚŠENÝ NAD OBRÁZKEM ZEUS.JPG -->
+                <div class="flex flex-col items-center justify-center mb-3 relative z-10">
+                    <span class="text-xs uppercase tracking-[0.25em] text-slate-300 font-classical mb-1">
+                        Posvátný Vavřínový Věnec Olympu
+                    </span>
+                    <div class="w-48 sm:w-60 md:w-68 flex justify-center drop-shadow-[0_6px_16px_rgba(212,175,55,0.35)]">
+                        <svg viewBox="0 0 260 115" class="w-full h-auto" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vavřínový věnec pověšený nad obrazem Dia">
+                            <!-- Stuha nahoře, za níž je věnec pověšen -->
+                            <path d="M130 2V18" stroke="#d4af37" stroke-width="3"/>
+                            <circle cx="130" cy="4" r="3.5" fill="#f7e28b"/>
+                            <!-- Levá větev vavřínového věnce -->
+                            <path d="M130 92C82 92 46 66 42 22" stroke="#b69121" stroke-width="2.6" stroke-linecap="round"/>
+                            <!-- Pravá větev vavřínového věnce -->
+                            <path d="M130 92C178 92 214 66 218 22" stroke="#b69121" stroke-width="2.6" stroke-linecap="round"/>
+                            
+                            <!-- Vavřínové lístky vlevo -->
+                            <g fill="url(#laurelGold)" stroke="#856814" stroke-width="0.8">
+                                <ellipse cx="108" cy="89" rx="12" ry="5" transform="rotate(-14 108 89)"/>
+                                <ellipse cx="90" cy="83" rx="13" ry="5.2" transform="rotate(-28 90 83)"/>
+                                <ellipse cx="73" cy="73" rx="13" ry="5.2" transform="rotate(-42 73 73)"/>
+                                <ellipse cx="59" cy="59" rx="13" ry="5" transform="rotate(-58 59 59)"/>
+                                <ellipse cx="49" cy="43" rx="12" ry="4.8" transform="rotate(-74 49 43)"/>
+                                <ellipse cx="44" cy="26" rx="11" ry="4.5" transform="rotate(-85 44 26)"/>
+                                <!-- Vnitřní lístky vlevo -->
+                                <ellipse cx="102" cy="78" rx="11" ry="4.4" transform="rotate(18 102 78)"/>
+                                <ellipse cx="85" cy="69" rx="11" ry="4.4" transform="rotate(5 85 69)"/>
+                                <ellipse cx="70" cy="56" rx="11" ry="4.4" transform="rotate(-12 70 56)"/>
+                                <ellipse cx="59" cy="40" rx="10" ry="4.2" transform="rotate(-30 59 40)"/>
+                            </g>
+
+                            <!-- Vavřínové lístky vpravo -->
+                            <g fill="url(#laurelGold)" stroke="#856814" stroke-width="0.8">
+                                <ellipse cx="152" cy="89" rx="12" ry="5" transform="rotate(14 152 89)"/>
+                                <ellipse cx="170" cy="83" rx="13" ry="5.2" transform="rotate(28 170 83)"/>
+                                <ellipse cx="187" cy="73" rx="13" ry="5.2" transform="rotate(42 187 73)"/>
+                                <ellipse cx="201" cy="59" rx="13" ry="5" transform="rotate(58 201 59)"/>
+                                <ellipse cx="211" cy="43" rx="12" ry="4.8" transform="rotate(74 211 43)"/>
+                                <ellipse cx="216" cy="26" rx="11" ry="4.5" transform="rotate(85 216 26)"/>
+                                <!-- Vnitřní lístky vpravo -->
+                                <ellipse cx="158" cy="78" rx="11" ry="4.4" transform="rotate(-18 158 78)"/>
+                                <ellipse cx="175" cy="69" rx="11" ry="4.4" transform="rotate(-5 175 69)"/>
+                                <ellipse cx="190" cy="56" rx="11" ry="4.4" transform="rotate(12 190 56)"/>
+                                <ellipse cx="201" cy="40" rx="10" ry="4.2" transform="rotate(30 201 40)"/>
+                            </g>
+
+                            <!-- Zlaté plody vavřínu a stuha uprostřed -->
+                            <circle cx="130" cy="92" r="6" fill="#f7e28b" stroke="#9e7818" stroke-width="1.5"/>
+                            <path d="M126 96L114 112M134 96L146 112" stroke="#d4af37" stroke-width="2.5" stroke-linecap="round"/>
+
+                            <defs>
+                                <linearGradient id="laurelGold" x1="40" y1="20" x2="220" y2="95" gradientUnits="userSpaceOnUse">
+                                    <stop offset="0%" stop-color="#7c9a5e"/>
+                                    <stop offset="45%" stop-color="#c9b049"/>
+                                    <stop offset="100%" stop-color="#f3e5ab"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- 2. HLAVNÍ OLTÁŘNÍ KOMPOZICE: BÍLÉ SVÍČKY, OVOCE, ŽALUDY A JEDINÝ OBRÁZEK ZEUS.JPG -->
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-end max-w-5xl mx-auto relative z-10">
+
+                    <!-- LEVÁ STRANA OLTÁŘE: 3 BÍLÉ SVÍČKY + ŽALUDY A OVOCE -->
+                    <div class="lg:col-span-3 flex flex-col items-center justify-end order-2 lg:order-1 bg-slate-900/50 border border-slate-700/80 rounded-xl p-4 shadow-inner">
+                        <div class="text-xs uppercase tracking-widest text-amber-200/80 font-classical mb-2">
+                            Levý svícen oltáře
+                        </div>
+                        
+                        <!-- Trojice bílých svíček vlevo -->
+                        <div class="flex items-end justify-center gap-4 sm:gap-5 pt-8 pb-3">
+                            <!-- Svíčka 1 -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 1 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-12 h-12 rounded-full bg-amber-400/35 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="url(#flameGrad1)"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                        <defs>
+                                            <linearGradient id="flameGrad1" x1="12" y1="2" x2="12" y2="34" gradientUnits="userSpaceOnUse">
+                                                <stop offset="0%" stop-color="#fef08a"/>
+                                                <stop offset="60%" stop-color="#f59e0b"/>
+                                                <stop offset="100%" stop-color="#ea580c"/>
+                                            </linearGradient>
+                                        </defs>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-7 sm:w-8 h-24 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-10 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+
+                            <!-- Svíčka 2 (vyšší prostřední) -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 2 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-14 h-14 rounded-full bg-amber-400/40 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-8 sm:w-9 h-32 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-11 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+
+                            <!-- Svíčka 3 -->
+                            <div class="candle-wrapper flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 3 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-12 h-12 rounded-full bg-amber-400/35 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-7 sm:w-8 h-20 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-10 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+                        </div>
+
+                        <!-- Levá obětní mísa: Ovoce (hrozny, jablko, fíky) a posvátné žaludy Diova dubu -->
+                        <div class="w-full pt-2 border-t border-slate-700/70 flex flex-col items-center">
+                            <svg class="w-44 h-20" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Obětiny ovoce a žaludů vlevo">
+                                <!-- Dubové listy v pozadí -->
+                                <path d="M18 52C12 44 16 35 24 38C28 32 36 36 34 44C40 46 36 55 26 56Z" fill="#4d7c0f" stroke="#365314" stroke-width="1.2"/>
+                                <path d="M158 52C164 44 160 35 152 38C148 32 140 36 142 44C136 46 140 55 150 56Z" fill="#4d7c0f" stroke="#365314" stroke-width="1.2"/>
+                                
+                                <!-- Červenozlaté jablko -->
+                                <circle cx="66" cy="46" r="15" fill="url(#appleGrad)" stroke="#7f1d1d" stroke-width="1"/>
+                                <path d="M66 30C67 26 70 25 72 25" stroke="#78350f" stroke-width="2" stroke-linecap="round"/>
+
+                                <!-- Fík a hruška -->
+                                <path d="M108 32C116 32 122 42 122 50C122 57 116 61 108 61C100 61 94 57 94 50C94 42 100 32 108 32Z" fill="#eab308" stroke="#a16207" stroke-width="1"/>
+
+                                <!-- Hroznové víno -->
+                                <g fill="#6d28d9" stroke="#4c1d95" stroke-width="0.8">
+                                    <circle cx="82" cy="44" r="5.5"/>
+                                    <circle cx="91" cy="44" r="5.5"/>
+                                    <circle cx="76" cy="52" r="5.5"/>
+                                    <circle cx="85" cy="52" r="5.5"/>
+                                    <circle cx="94" cy="52" r="5.5"/>
+                                    <circle cx="81" cy="59" r="5.5"/>
+                                    <circle cx="89" cy="59" r="5.5"/>
+                                </g>
+
+                                <!-- Žaludy (posvátný dub Dia) -->
+                                <g transform="translate(28, 42)">
+                                    <ellipse cx="12" cy="14" rx="7" ry="9" fill="#b45309" stroke="#78350f" stroke-width="1"/>
+                                    <path d="M4 10C4 5 20 5 20 10Z" fill="#78350f" stroke="#451a03" stroke-width="1"/>
+                                    <path d="M12 3V6" stroke="#451a03" stroke-width="1.5"/>
+                                </g>
+                                <g transform="translate(125, 42)">
+                                    <ellipse cx="12" cy="14" rx="7" ry="9" fill="#b45309" stroke="#78350f" stroke-width="1"/>
+                                    <path d="M4 10C4 5 20 5 20 10Z" fill="#78350f" stroke="#451a03" stroke-width="1"/>
+                                    <path d="M12 3V6" stroke="#451a03" stroke-width="1.5"/>
+                                </g>
+
+                                <!-- Zlatomramorový podnos -->
+                                <path d="M15 62H165L150 73H30L15 62Z" fill="url(#trayGrad)" stroke="#d4af37" stroke-width="1.2"/>
+                                <defs>
+                                    <radialGradient id="appleGrad" cx="0.35" cy="0.35" r="0.7">
+                                        <stop offset="0%" stop-color="#fde047"/>
+                                        <stop offset="45%" stop-color="#ef4444"/>
+                                        <stop offset="100%" stop-color="#991b1b"/>
+                                    </radialGradient>
+                                    <linearGradient id="trayGrad" x1="15" y1="62" x2="165" y2="73" gradientUnits="userSpaceOnUse">
+                                        <stop offset="0%" stop-color="#94a3b8"/>
+                                        <stop offset="50%" stop-color="#f8fafc"/>
+                                        <stop offset="100%" stop-color="#64748b"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <span class="text-[11px] text-slate-300 tracking-wider uppercase font-classical">
+                                Ovoce, žaludy &amp; bílé svíčky
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- STŘED OLTÁŘE: JEDINÝ OBRÁZEK ZEUS.JPG V POSVÁTNÉM RÁMU -->
+                    <div class="lg:col-span-6 flex flex-col items-center order-1 lg:order-2">
+                        <div class="relative p-2 sm:p-3.5 rounded-2xl bg-gradient-to-b from-amber-300 via-amber-500 to-amber-700 shadow-[0_0_45px_rgba(212,175,55,0.38)] w-full max-w-md mx-auto">
+                            
+                            <!-- Ozdobné žaludy a ovoce v rozích rámu kolem Zeus.jpg -->
+                            <div class="absolute -top-3 -left-3 w-9 h-9 rounded-full bg-slate-900 border border-amber-400 flex items-center justify-center shadow-md z-20" title="Posvátný žalud Diova dubu">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                                    <ellipse cx="12" cy="14" rx="5.5" ry="7" fill="#d97706"/>
+                                    <path d="M5.5 11C5.5 6.5 18.5 6.5 18.5 11Z" fill="#78350f"/>
+                                    <path d="M12 4V7" stroke="#f7e28b" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <div class="absolute -top-3 -right-3 w-9 h-9 rounded-full bg-slate-900 border border-amber-400 flex items-center justify-center shadow-md z-20" title="Posvátný žalud Diova dubu">
+                                <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                                    <ellipse cx="12" cy="14" rx="5.5" ry="7" fill="#d97706"/>
+                                    <path d="M5.5 11C5.5 6.5 18.5 6.5 18.5 11Z" fill="#78350f"/>
+                                    <path d="M12 4V7" stroke="#f7e28b" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+
+                            <!-- Vnitřní svatyně pro JEDINÝ obrázek na celém webu: Zeus.jpg -->
+                            <div class="relative rounded-xl overflow-hidden bg-slate-800 border-2 border-slate-900 aspect-[4/5] flex items-center justify-center">
+                                <!-- JEDINÝ <img> TAG NA CELÉM WEBU: Zeus.jpg -->
+                                <img 
+                                    src="Zeus.jpg" 
+                                    alt="Zeus – Jediný Bůh sídlící na Hoře Olymp na vrcholu Mytikas" 
+                                    class="w-full h-full object-cover relative z-10"
+                                    onerror="this.style.opacity='0'; document.getElementById('zeus-sacred-relief-fallback').classList.remove('hidden');"
+                                >
+
+                                <!-- Umělecký oltářní podklad (zobrazí se pouze tehdy, pokud soubor Zeus.jpg ještě není nahrán ve stejné složce) -->
+                                <div id="zeus-sacred-relief-fallback" class="hidden absolute inset-0 flex flex-col items-center justify-between p-6 text-center bg-gradient-to-b from-slate-800 via-slate-900 to-slate-950 z-0">
+                                    <div class="text-xs uppercase tracking-[0.2em] text-amber-300/80 font-classical">
+                                        Hora Olymp • Mytikas
+                                    </div>
+                                    <svg class="w-48 h-56 text-amber-300/90 drop-shadow-[0_0_18px_rgba(212,175,55,0.4)]" viewBox="0 0 200 230" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                        <!-- Svatozář Olympu -->
+                                        <circle cx="100" cy="88" r="62" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4 4" fill="rgba(212,175,55,0.07)"/>
+                                        <circle cx="100" cy="88" r="48" stroke="#f7e28b" stroke-width="1" stroke-opacity="0.5"/>
+                                        <!-- Koruna a vznešená lidská tvář Dia -->
+                                        <path d="M68 58L80 42L100 54L120 42L132 58" stroke="#f7e28b" stroke-width="2.5" stroke-linejoin="round"/>
+                                        <path d="M72 78C72 58 84 48 100 48C116 48 128 58 128 78C128 102 116 122 100 122C84 122 72 102 72 78Z" fill="rgba(248,250,252,0.12)" stroke="#f8fafc" stroke-width="2"/>
+                                        <!-- Lidské oči plné moudrosti a emocí -->
+                                        <path d="M84 78C87 75 92 75 95 78" stroke="#f8fafc" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M105 78C108 75 113 75 116 78" stroke="#f8fafc" stroke-width="2" stroke-linecap="round"/>
+                                        <!-- Plnovous a vlasy -->
+                                        <path d="M68 74C58 85 60 112 75 128C85 140 94 146 100 146C106 146 115 140 125 128C140 112 142 85 132 74" stroke="#e2e8f0" stroke-width="2.5" fill="rgba(226,232,240,0.15)"/>
+                                        <!-- Руcho a blesk Olympu -->
+                                        <path d="M42 205C46 168 68 150 100 150C132 150 154 168 158 205" stroke="#d4af37" stroke-width="2.5" fill="rgba(212,175,55,0.12)"/>
+                                        <path d="M104 160L92 182H103L97 206L114 179H103L104 160Z" fill="#f7e28b"/>
+                                    </svg>
+                                    <div class="space-y-1">
+                                        <p class="font-classical text-amber-300 text-lg font-bold tracking-widest">ZEUS.JPG</p>
+                                        <p class="text-xs text-slate-300 max-w-xs">
+                                            Posvátný obraz <code class="text-amber-200">Zeus.jpg</code> je připojen v kódu (<code class="text-amber-200">src="Zeus.jpg"</code>).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Spodní obětní pás přímo pod obrazem Zeus.jpg: žaludy, granátové jablko, hrozny a 2 votivní bílé svíčky -->
+                        <div class="w-full max-w-md mt-3 px-4 py-2.5 rounded-xl bg-slate-900/70 border border-amber-500/30 flex items-center justify-between gap-2">
+                            <!-- Malá votivní svíčka vlevo dole -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá oltářní svíčka 4 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-6 h-8 -mb-1">
+                                    <div class="flame-halo absolute w-9 h-9 rounded-full bg-amber-400/40 blur-sm"></div>
+                                    <svg class="flame-outer w-4 h-7" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-1.5 bg-slate-800"></div>
+                                <div class="candle-body w-6 h-10 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-8 h-1.5 bg-amber-500 rounded-sm"></div>
+                            </div>
+
+                            <!-- Středový věnec žaludů a ovoce pod Zeus.jpg -->
+                            <div class="flex-1 flex flex-col items-center text-center">
+                                <svg class="w-52 h-12" viewBox="0 0 220 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Obětiny žaludů a ovoce pod obrazem Dia">
+                                    <!-- Dubové ratolesti -->
+                                    <path d="M20 34C65 24 155 24 200 34" stroke="#854d0e" stroke-width="2" stroke-linecap="round"/>
+                                    <!-- Žaludy -->
+                                    <g transform="translate(34, 16)">
+                                        <ellipse cx="8" cy="11" rx="5.5" ry="7" fill="#b45309"/>
+                                        <path d="M2 8C2 4 14 4 14 8Z" fill="#78350f"/>
+                                    </g>
+                                    <g transform="translate(64, 14)">
+                                        <ellipse cx="8" cy="11" rx="5.5" ry="7" fill="#d97706"/>
+                                        <path d="M2 8C2 4 14 4 14 8Z" fill="#78350f"/>
+                                    </g>
+                                    <!-- Granátové jablko uprostřed -->
+                                    <circle cx="110" cy="24" r="12" fill="#be123c" stroke="#fda4af" stroke-width="1"/>
+                                    <circle cx="107" cy="22" r="1.5" fill="#fecdd3"/>
+                                    <circle cx="112" cy="21" r="1.5" fill="#fecdd3"/>
+                                    <circle cx="110" cy="26" r="1.5" fill="#fecdd3"/>
+                                    <!-- Žaludy vpravo -->
+                                    <g transform="translate(140, 14)">
+                                        <ellipse cx="8" cy="11" rx="5.5" ry="7" fill="#d97706"/>
+                                        <path d="M2 8C2 4 14 4 14 8Z" fill="#78350f"/>
+                                    </g>
+                                    <g transform="translate(170, 16)">
+                                        <ellipse cx="8" cy="11" rx="5.5" ry="7" fill="#b45309"/>
+                                        <path d="M2 8C2 4 14 4 14 8Z" fill="#78350f"/>
+                                    </g>
+                                </svg>
+                            </div>
+
+                            <!-- Malá votivní svíčka vpravo dole -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá oltářní svíčka 5 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-6 h-8 -mb-1">
+                                    <div class="flame-halo absolute w-9 h-9 rounded-full bg-amber-400/40 blur-sm"></div>
+                                    <svg class="flame-outer w-4 h-7" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-1.5 bg-slate-800"></div>
+                                <div class="candle-body w-6 h-10 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-8 h-1.5 bg-amber-500 rounded-sm"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PRAVÁ STRANA OLTÁŘE: 3 BÍLÉ SVÍČKY + ŽALUDY A OVOCE -->
+                    <div class="lg:col-span-3 flex flex-col items-center justify-end order-3 bg-slate-900/50 border border-slate-700/80 rounded-xl p-4 shadow-inner">
+                        <div class="text-xs uppercase tracking-widest text-amber-200/80 font-classical mb-2">
+                            Pravý svícen oltáře
+                        </div>
+
+                        <!-- Trojice bílých svíček vpravo -->
+                        <div class="flex items-end justify-center gap-4 sm:gap-5 pt-8 pb-3">
+                            <!-- Svíčka 6 -->
+                            <div class="candle-wrapper flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 6 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-12 h-12 rounded-full bg-amber-400/35 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-7 sm:w-8 h-20 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-10 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+
+                            <!-- Svíčka 7 (vyšší prostřední) -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 7 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-14 h-14 rounded-full bg-amber-400/40 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-8 sm:w-9 h-32 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-11 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+
+                            <!-- Svíčka 8 -->
+                            <div class="candle-wrapper is-lit flex flex-col items-center" onclick="toggleCandle(this)" role="button" tabindex="0" aria-label="Bílá svíčka 8 - kliknutím zapálíte nebo zhasnete" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();toggleCandle(this);}">
+                                <div class="candle-flame-container relative flex items-center justify-center w-8 h-12 -mb-1">
+                                    <div class="flame-halo absolute w-12 h-12 rounded-full bg-amber-400/35 blur-md"></div>
+                                    <svg class="flame-outer w-6 h-10" viewBox="0 0 24 36" fill="none">
+                                        <path d="M12 2C12 2 21 13 21 22C21 28.5 16.97 34 12 34C7.03 34 3 28.5 3 22C3 13 12 2 12 2Z" fill="#f59e0b"/>
+                                        <path d="M12 11C12 11 16.5 18 16.5 23.5C16.5 27.5 14.5 31 12 31C9.5 31 7.5 27.5 7.5 23.5C7.5 18 12 11 12 11Z" fill="#fffbeb"/>
+                                    </svg>
+                                </div>
+                                <div class="w-0.5 h-2 bg-slate-800"></div>
+                                <div class="candle-body w-7 sm:w-8 h-24 rounded-t-sm border border-slate-200"></div>
+                                <div class="w-10 h-2.5 bg-gradient-to-r from-amber-700 via-amber-400 to-amber-700 rounded-sm shadow"></div>
+                            </div>
+                        </div>
+
+                        <!-- Pravá obětní mísa: Ovoce a žaludy -->
+                        <div class="w-full pt-2 border-t border-slate-700/70 flex flex-col items-center">
+                            <svg class="w-44 h-20" viewBox="0 0 180 80" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Obětiny ovoce a žaludů vpravo">
+                                <!-- Dubové listy -->
+                                <path d="M20 52C14 44 18 35 26 38C30 32 38 36 36 44C42 46 38 55 28 56Z" fill="#4d7c0f" stroke="#365314" stroke-width="1.2"/>
+                                <path d="M156 52C162 44 158 35 150 38C146 32 138 36 140 44C134 46 138 55 148 56Z" fill="#4d7c0f" stroke="#365314" stroke-width="1.2"/>
+                                
+                                <!-- Granátové jablko a fíky -->
+                                <circle cx="112" cy="46" r="15" fill="#be123c" stroke="#881337" stroke-width="1"/>
+                                <path d="M68 33C75 33 81 42 81 50C81 57 75 61 68 61C61 61 55 57 55 50C55 42 61 33 68 33Z" fill="#4c1d95" stroke="#2e1065" stroke-width="1"/>
+
+                                <!-- Zelené a zlaté hrozny -->
+                                <g fill="#84cc16" stroke="#3f6212" stroke-width="0.8">
+                                    <circle cx="84" cy="44" r="5.5"/>
+                                    <circle cx="93" cy="44" r="5.5"/>
+                                    <circle cx="79" cy="52" r="5.5"/>
+                                    <circle cx="88" cy="52" r="5.5"/>
+                                    <circle cx="97" cy="52" r="5.5"/>
+                                    <circle cx="84" cy="59" r="5.5"/>
+                                    <circle cx="92" cy="59" r="5.5"/>
+                                </g>
+
+                                <!-- Žaludy -->
+                                <g transform="translate(28, 42)">
+                                    <ellipse cx="12" cy="14" rx="7" ry="9" fill="#b45309" stroke="#78350f" stroke-width="1"/>
+                                    <path d="M4 10C4 5 20 5 20 10Z" fill="#78350f" stroke="#451a03" stroke-width="1"/>
+                                    <path d="M12 3V6" stroke="#451a03" stroke-width="1.5"/>
+                                </g>
+                                <g transform="translate(125, 42)">
+                                    <ellipse cx="12" cy="14" rx="7" ry="9" fill="#b45309" stroke="#78350f" stroke-width="1"/>
+                                    <path d="M4 10C4 5 20 5 20 10Z" fill="#78350f" stroke="#451a03" stroke-width="1"/>
+                                    <path d="M12 3V6" stroke="#451a03" stroke-width="1.5"/>
+                                </g>
+
+                                <!-- Zlatomramorový podnos -->
+                                <path d="M15 62H165L150 73H30L15 62Z" fill="url(#trayGrad)" stroke="#d4af37" stroke-width="1.2"/>
+                            </svg>
+                            <span class="text-[11px] text-slate-300 tracking-wider uppercase font-classical">
+                                Ovoce, žaludy &amp; bílé svíčky
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interaktivní informace k zapálení svíček -->
+                <div class="mt-6 text-center relative z-10">
+                    <div class="inline-flex flex-wrap items-center justify-center gap-3 px-4 py-2 rounded-full bg-slate-900/80 border border-slate-600/80 text-xs sm:text-sm text-slate-200">
+                        <span>🕯️ Kliknutím na jednotlivé bílé svíčky je zapálíte či uhasíte.</span>
+                        <span class="text-amber-300 font-classical font-semibold" id="candle-status-counter">
+                            Hoří 6 z 8 svíček
+                        </span>
+                        <span class="text-slate-500">|</span>
+                        <span onclick="lightAllCandles()" class="cursor-pointer text-amber-300 hover:text-amber-200 underline decoration-amber-400/60 underline-offset-4 font-classical text-xs uppercase tracking-wider">
+                            Zapálit všechny svíčky
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 3. ZLATÝ MAJESTÁTNÍ NÁPIS POD OBRÁZKEM ZEUS.JPG -->
+                <div class="mt-8 sm:mt-10 pt-8 border-t border-amber-400/30 text-center max-w-4xl mx-auto relative z-10">
+                    <p class="majestic-gold-inscription text-xl sm:text-2xl md:text-3xl lg:text-4xl px-2">
+                        Jediný Bůh, skutečným jménem Zeus který skutečně sídlí na Hoře Olymp na vrcholu Mytikas, má lidské emoce i lidský vzhled
+                    </p>
+                </div>
+
+                <!-- Dekorativní zlatý meandr dole -->
+                <div class="meander-gold mt-8 opacity-80" aria-hidden="true"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================================================================== -->
+    <!-- ZÁPATÍ CHRÁMU (Stylobat)                                            -->
+    <!-- =================================================================== -->
+    <footer class="relative z-10 bg-slate-800 text-slate-200 border-t-4 border-amber-500/60 mt-12">
+        <div class="meander-gold opacity-70" aria-hidden="true"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 text-center">
+            <p class="font-classical text-xl sm:text-2xl tracking-widest text-amber-300 font-bold mb-2">
+                b6b.eu
+            </p>
+            <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto mb-6">
+                Starořecká svatyně Hory Olymp • Vrchol Mytikas • K uctění jediného Boha Dia, Krále králů a Pána pánů.
+            </p>
+            <div class="flex flex-wrap items-center justify-center gap-4 text-xs sm:text-sm font-classical uppercase tracking-wider text-slate-400">
+                <a href="#oltar" onclick="switchSubpage('oltar', event)" class="hover:text-amber-300 transition">Oltář Dia</a>
+                <span>•</span>
+                <span onclick="openCookieBanner()" class="cursor-pointer text-amber-300/90 hover:text-amber-200 underline underline-offset-4">
+                    Nastavení a zásady Cookies (EU / ČR)
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================================================================== -->
+    <!-- LIŠTA COOKIES V SOULADU S LEGISLATIVOU EVROPSKÉ UNIE A ČESKÉ REPUBLIKY -->
+    <!-- =================================================================== -->
+    <aside id="eu-cz-cookie-banner" class="fixed bottom-0 inset-x-0 z-50 p-3 sm:p-5 hidden" role="dialog" aria-labelledby="cookie-title" aria-describedby="cookie-desc">
+        <div class="max-w-5xl mx-auto bg-slate-900/98 text-slate-100 rounded-2xl border-2 border-amber-500/60 shadow-[0_-10px_40px_rgba(15,23,42,0.6)] p-5 sm:p-6 backdrop-blur-md">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+                <div class="space-y-2 flex-1">
+                    <div class="flex items-center gap-2">
+                        <span class="text-amber-400 text-lg">🏛️</span>
+                        <h3 id="cookie-title" class="font-classical text-base sm:text-lg font-bold tracking-wider text-amber-300">
+                            Informace o souborech Cookies (Legislativa EU a ČR)
+                        </h3>
+                    </div>
+                    <p id="cookie-desc" class="text-sm sm:text-base text-slate-200 leading-relaxed">
+                        Webová svatyně <strong>b6b.eu</strong> respektuje vaše soukromí v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR), směrnicí ePrivacy a zákonem č. 127/2005 Sb., o elektronických komunikacích (v platném znění České republiky). Tento statický web používá výhradně technicky nezbytné uložení vaší volby souhlasu a žádné osobní údaje třetím stranám nepředává.
+                    </p>
+                    <!-- Rozbalovací podrobnosti o cookies -->
+                    <div id="cookie-details-box" class="hidden mt-3 pt-3 border-t border-slate-700 text-xs sm:text-sm text-slate-300 space-y-1.5">
+                        <p><strong class="text-amber-300">1. Technicky nezbytné cookies (vždy aktivní):</strong> Slouží výhradně k uložení vašeho rozhodnutí o liště cookies v prohlížeči (<code class="text-amber-200">b6b_eu_cookies_consent</code>) po dobu 12 měsíců.</p>
+                        <p><strong class="text-amber-300">2. Analytické a marketingové cookies (nepoužívány):</strong> Na webu b6b.eu nejsou nasazeny žádné sledovací skripty, reklamní systémy ani formuláře sbírající osobní údaje.</p>
+                    </div>
+                </div>
+
+                <!-- Volby souhlasu dle požadavků ÚOOÚ a GDPR (rovnocenné možnosti) -->
+                <div class="flex flex-wrap items-center gap-2.5 w-full lg:w-auto justify-end shrink-0 font-classical text-xs tracking-wider uppercase">
+                    <span onclick="toggleCookieDetails()" class="cursor-pointer px-3.5 py-2.5 rounded-lg border border-slate-600 text-slate-300 hover:bg-slate-800 transition text-center">
+                        Podrobnosti
+                    </span>
+                    <span onclick="saveCookieChoice('necessary')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')saveCookieChoice('necessary')" class="cursor-pointer px-4 py-2.5 rounded-lg bg-slate-700 hover:bg-slate-600 text-slate-100 border border-slate-500 font-semibold transition text-center">
+                        Pouze nezbytné
+                    </span>
+                    <span onclick="saveCookieChoice('all')" role="button" tabindex="0" onkeydown="if(event.key==='Enter')saveCookieChoice('all')" class="cursor-pointer px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-400 text-slate-950 font-bold shadow transition text-center">
+                        Přijmout vše
+                    </span>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- =================================================================== -->
+    <!-- JAVASCRIPT: SVÍČKY, HAMBURGER MENU PODSTRÁNEK A EU/ČR COOKIES       -->
+    <!-- =================================================================== -->
+    <script>
+        /**
+         * 1. INTERAKTIVNÍ BÍLÉ SVÍČKY NA OLTÁŘI KOLEM ZEUS.JPG
+         */
+        function toggleCandle(candleElement) {
+            candleElement.classList.toggle('is-lit');
+            updateCandleCount();
+        }
+
+        function lightAllCandles() {
+            const candles = document.querySelectorAll('.candle-wrapper');
+            candles.forEach(candle => candle.classList.add('is-lit'));
+            updateCandleCount();
+        }
+
+        function updateCandleCount() {
+            const total = document.querySelectorAll('.candle-wrapper').length;
+            const lit = document.querySelectorAll('.candle-wrapper.is-lit').length;
+            const counterEl = document.getElementById('candle-status-counter');
+            if (!counterEl) return;
+
+            if (lit === 0) {
+                counterEl.textContent = 'Všechny svíčky jsou zhasnuté (kliknutím je zapálíte)';
+            } else if (lit === 1) {
+                counterEl.textContent = 'Hoří 1 z ' + total + ' bílých svíček';
+            } else if (lit >= 2 && lit <= 4) {
+                counterEl.textContent = 'Hoří ' + lit + ' z ' + total + ' bílých svíček';
+            } else {
+                counterEl.textContent = 'Hoří ' + lit + ' z ' + total + ' bílých svíček';
+            }
+        }
+
+        /**
+         * 2. MOBILNÍ HAMBURGER MENU A PŘEPÍNÁNÍ PODSTRÁNEK SVATYNĚ
+         */
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-hamburger-menu');
+            const openIcon = document.getElementById('hamburger-icon-open');
+            const closeIcon = document.getElementById('hamburger-icon-close');
+            const toggleBtn = document.getElementById('mobile-menu-toggle');
+
+            const isHidden = menu.classList.contains('hidden');
+            if (isHidden) {
+                menu.classList.remove('hidden');
+                openIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                toggleBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                menu.classList.add('hidden');
+                openIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                toggleBtn.setAttribute('aria-expanded', 'false');
+            }
+        }
+
+        function switchSubpage(target, event, fromMobile = false) {
+            if (event) {
+                event.preventDefault();
+            }
+
+            const oltarSection = document.getElementById('section-oltar');
+            if (oltarSection) {
+                oltarSection.classList.remove('hidden-section');
+            }
+
+            // Zavřít hamburger menu po výběru položky na mobilu
+            if (fromMobile) {
+                const menu = document.getElementById('mobile-hamburger-menu');
+                if (!menu.classList.contains('hidden')) {
+                    toggleMobileMenu();
+                }
+            }
+
+            // Plynulý posun na začátek svatyně
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /**
+         * 3. SPRÁVA COOKIES DLE LEGISLATIVY EU (GDPR) A ČR (Zákon č. 127/2005 Sb.)
+         */
+        const COOKIE_STORAGE_KEY = 'b6b_eu_cookies_consent_v1';
+
+        function initCookieBanner() {
+            try {
+                const savedConsent = localStorage.getItem(COOKIE_STORAGE_KEY);
+                if (!savedConsent) {
+                    document.getElementById('eu-cz-cookie-banner').classList.remove('hidden');
+                }
+            } catch (e) {
+                document.getElementById('eu-cz-cookie-banner').classList.remove('hidden');
+            }
+        }
+
+        function saveCookieChoice(level) {
+            const payload = {
+                level: level,
+                timestamp: new Date().toISOString(),
+                domain: 'b6b.eu'
+            };
+            try {
+                localStorage.setItem(COOKIE_STORAGE_KEY, JSON.stringify(payload));
+                document.cookie = COOKIE_STORAGE_KEY + "=" + encodeURIComponent(level) + "; max-age=31536000; path=/; SameSite=Lax";
+            } catch (e) {
+                // Fallback pokud je úložiště blokováno
+            }
+            document.getElementById('eu-cz-cookie-banner').classList.add('hidden');
+        }
+
+        function openCookieBanner() {
+            document.getElementById('eu-cz-cookie-banner').classList.remove('hidden');
+        }
+
+        function toggleCookieDetails() {
+            const details = document.getElementById('cookie-details-box');
+            if (details) {
+                details.classList.toggle('hidden');
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            updateCandleCount();
+            initCookieBanner();
+        });
+    </script>
+</body>
+</html>
+```
